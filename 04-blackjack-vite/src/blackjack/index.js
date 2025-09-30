@@ -40,6 +40,14 @@ let deck = [];
 
     divCartasJugadores.forEach( elem => elem.innerText = '');
 
+    const cartaComputadora = pedirCarta( deck );
+        acumularPuntos(cartaComputadora, puntosJugadores.length - 1, puntosJugadores, smallsPts)
+        crearNuevaCarta(cartaComputadora, puntosJugadores.length - 1, divCartasJugadores);
+
+    const cartaJugador = pedirCarta( deck );
+        acumularPuntos(cartaJugador, 0, puntosJugadores, smallsPts)
+        crearNuevaCarta(cartaJugador, 0, divCartasJugadores);
+
     btnPedir.disabled = false;
     btnDetener.disabled = false;
   };
